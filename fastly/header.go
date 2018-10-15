@@ -3,6 +3,7 @@ package fastly
 import (
 	"fmt"
 	"sort"
+	"net/url"
 )
 
 const (
@@ -268,7 +269,7 @@ func (c *Client) DeleteHeader(i *DeleteHeaderInput) error {
 		return ErrMissingName
 	}
 
-	path := fmt.Sprintf("/service/%s/version/%d/header/%s", i.Service, i.Version, i.Name)
+	path := fmt.Sprintf("/service/%s/version/%d/header/%s", i.Service, i.Version, url.PathEscape(i.Name))
 	resp, err := c.Delete(path, nil)
 	if err != nil {
 		return err
