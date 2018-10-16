@@ -83,7 +83,7 @@ func (c *Client) GetVCL(i *GetVCLInput) (*VCL, error) {
 		return nil, ErrMissingName
 	}
 
-	path := fmt.Sprintf("/service/%s/version/%d/vcl/%s", i.Service, i.Version, i.Name)
+	path := fmt.Sprintf("/service/%s/version/%d/vcl/%s", i.Service, i.Version, url.PathEscape(i.Name))
 	resp, err := c.Get(path, nil)
 	if err != nil {
 		return nil, err
@@ -189,7 +189,7 @@ func (c *Client) UpdateVCL(i *UpdateVCLInput) (*VCL, error) {
 		return nil, ErrMissingName
 	}
 
-	path := fmt.Sprintf("/service/%s/version/%d/vcl/%s", i.Service, i.Version, i.Name)
+	path := fmt.Sprintf("/service/%s/version/%d/vcl/%s", i.Service, i.Version, url.PathEscape(i.Name))
 	resp, err := c.PutForm(path, i, nil)
 	if err != nil {
 		return nil, err
@@ -227,7 +227,7 @@ func (c *Client) ActivateVCL(i *ActivateVCLInput) (*VCL, error) {
 		return nil, ErrMissingName
 	}
 
-	path := fmt.Sprintf("/service/%s/version/%d/vcl/%s/main", i.Service, i.Version, i.Name)
+	path := fmt.Sprintf("/service/%s/version/%d/vcl/%s/main", i.Service, i.Version, url.PathEscape(i.Name))
 	resp, err := c.Put(path, nil)
 	if err != nil {
 		return nil, err
@@ -265,7 +265,7 @@ func (c *Client) DeleteVCL(i *DeleteVCLInput) error {
 		return ErrMissingName
 	}
 
-	path := fmt.Sprintf("/service/%s/version/%d/vcl/%s", i.Service, i.Version, i.Name)
+	path := fmt.Sprintf("/service/%s/version/%d/vcl/%s", i.Service, i.Version, url.PathEscape(i.Name))
 	resp, err := c.Delete(path, nil)
 	if err != nil {
 		return err
