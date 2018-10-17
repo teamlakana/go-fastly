@@ -221,7 +221,7 @@ func (c *Client) DeleteCacheSetting(i *DeleteCacheSettingInput) error {
 	}
 
 	path := fmt.Sprintf("/service/%s/version/%d/cache_settings/%s", i.Service, i.Version, url.PathEscape(i.Name))
-	fmt.Print("(DELETE on " + path ")")
+	fmt.Print("(DELETE on " + path + ")")
 	resp, err := c.Delete(path, nil)
 	if err != nil {
 		return err
