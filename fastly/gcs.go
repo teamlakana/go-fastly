@@ -3,6 +3,7 @@ package fastly
 import (
 	"fmt"
 	"sort"
+	"net/url"
 )
 
 // GCS represents an GCS logging response from the Fastly API.

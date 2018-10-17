@@ -2,6 +2,7 @@ package fastly
 
 import (
 	"fmt"
+	"net/url"
 )
 
 // BigQuery represents a BigQuery logging response from the Fastly API.

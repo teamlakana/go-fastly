@@ -3,6 +3,7 @@ package fastly
 import (
 	"fmt"
 	"sort"
+	"net/url"
 )
 
 // Gzip represents an Gzip logging response from the Fastly API.

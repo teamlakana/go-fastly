@@ -3,6 +3,7 @@ package fastly
 import (
 	"fmt"
 	"sort"
+	"net/url"
 )
 
 // Dictionary represents a dictionary response from the Fastly API.

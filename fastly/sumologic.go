@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"sort"
 	"time"
+	"net/url"
 )
 
 // Sumologic represents a sumologic response from the Fastly API.

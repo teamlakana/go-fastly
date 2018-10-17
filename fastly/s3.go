@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"sort"
 	"time"
+	"net/url"
 )
 
 type S3Redundancy string

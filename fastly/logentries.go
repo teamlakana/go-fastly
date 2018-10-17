@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"sort"
 	"time"
+	"net/url"
 )
 
 // Logentries represents a logentries response from the Fastly API.

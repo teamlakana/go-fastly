@@ -3,6 +3,7 @@ package fastly
 import (
 	"fmt"
 	"sort"
+	"net/url"
 )
 
 // Backend represents a backend response from the Fastly API.

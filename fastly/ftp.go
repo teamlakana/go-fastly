@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"sort"
 	"time"
+	"net/url"
 )
 
 // FTP represents an FTP logging response from the Fastly API.

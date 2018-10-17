@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"sort"
 	"time"
+	"net/url"
 )
 
 // Syslog represents a syslog response from the Fastly API.
